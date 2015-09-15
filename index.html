@@ -12,48 +12,48 @@
       <h1>Full Ticket Theatres</h1>
       <div class="row">
         <div class="col-md-6">
-          <h2>Add a movie:</h2>
+          <div class="hide-form">
+          <h2>Tonight's Movies:</h2>
+          <p>Midnight Madness</p>
+          <ul>
+            <li>10am</li>
+            <li>2pm</li>
+          </ul>
+          <p>PeeWee's Big Adventure</p>
+          <ul><li>11am</li>
+          <li>3pm</li>
+        </ul>
+          <p>Forrest Gump</p>
+          <ul>
+            <li>10am</li>
+          <li>2pm</li>
+        </ul>
+
           <form id="new-movie">
             <div class="form-group">
-              <label for="new-movie-title">Movie Title</label>
+              <label for="new-movie-title">Select Movie</label>
               <input type="text" class="form-control" id="new-movie-title">
-
-                <div class="form-group">
-                  <label for="new-movie-time">Movie Time</label>
-                  <input type="text" class="form-control new-movie-time">
-                </div>
+            </div>
+            <div class="form-group">
+              <label for="new-movie-time">Your Age</label>
+              <input type="text" class="form-control" id="new-movie-time">
+            </div>
+          </div>
             </div>
 
-            <!-- <div id="new-tickets">
-              <div class="new-ticket"> -->
-
-                <!-- <div class="form-group">
-                  <label for="new-age">Patron Age</label>
-                  <input type="text" class="form-control new-age">
-                </div>
-              </div>
-            </div> -->
-
-            <!-- <span class="btn btn-primary" id="add-address">Another Address</span> -->
-
-            <button type="submit" class="btn">Add</button>
+             <button type="submit" class="btn">Purchase Ticket</button>
           </form>
 
-          <h2>Contacts:</h2>
-          <ul id="contacts">
+          <h2>Movies:</h2>
+          <ul id="movies">
 
           </ul>
         </div>
 
         <div class="col-md-6">
-          <div id="show-contact">
+          <div id="show-movie">
             <h2></h2>
 
-              <p>First name: <span class="first-name"></span></p>
-              <p>Last name: <span class="last-name"></span></p>
-              <p>Address: </p>
-                <ul id="addresses">
-                </ul>
 
           </div>
         </div>

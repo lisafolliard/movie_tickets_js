@@ -2,11 +2,11 @@
   display: none;
 }
 
-.contact {
+.movie {
   cursor: pointer;
   color: red;
 }
 
-.contact:hover {
+.movie:hover {
   text-decoration: underline;
 }
