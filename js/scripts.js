@@ -1,14 +1,13 @@
-function Movie(movieTitle) {
+function Movie(movieTitle, movieTime) {
   this.movieTitle = movieTitle
+  this.movieTime = movieTime
   this.tickets = []
 }
 
-function Ticket(movieTime, age) {
-  this.movieTime = movieTime
-  this.age = age
-
+Movie.prototype.fullMovie = function() {
+  return this.movieTitle + ", " + this.movieTime;
 }
 
-Ticket.prototype.fullTicket = function() {
-  return this.movieTime + ", " + this.age;
+function Ticket(age) {
+  this.age = age
 }
