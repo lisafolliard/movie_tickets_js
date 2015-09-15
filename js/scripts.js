@@ -6,4 +6,9 @@ function Movie(movieTitle) {
 function Ticket(movieTime, age) {
   this.movieTime = movieTime
   this.age = age
+
+}
+
+Ticket.prototype.fullTicket = function() {
+  return this.movieTime + ", " + this.age;
 }

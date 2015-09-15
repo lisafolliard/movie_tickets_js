@@ -12,10 +12,10 @@ describe("Ticket", function() {
     expect(testTicket.movieTime).to.equal(2100);
     expect(testTicket.age).to.equal(55);
   });
+
+
+  it("adds the fullTicket method to all the tickets", function() {
+    var testTicket = new Ticket("2200", "13");
+    expect(testTicket.fullTicket()).to.equal("2200, 13");
+  });
 });
-//
-//   it("adds the fullAddress method to all the addresses", function() {
-//     var testAddress = new Address("4043 Camero Ave", "Los Angeles", "Ca");
-//     expect(testAddress.fullAddress()).to.equal("4043 Camero Ave, Los Angeles, Ca")
-//   });
-// });
