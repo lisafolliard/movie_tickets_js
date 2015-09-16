@@ -1,26 +1,18 @@
-function Ticket(movie, timeOfDay, age) {
-  this.movie = movie;
-  this.timeOfDay = timeOfDay;
-  this.age = age;
-
+function Ticket(movieTitle, movieShowTime, patronAge) {
+  this.movieTitle = movieTitle;
+  this.movieShowTime = movieShowTime;
+  this.patronAge = patronAge;
 }
 
+Ticket.prototype.cost = function() {
+ var cost = 10;
 
+ if (this.patronAge <== 12 || this.patronAge >== 55) {
+   cost += 2;
+ }
+  return cost;
+};
 
-
-function Movie(movieTitle, movieTime) {
-  this.movieTitle = movieTitle
-  this.movieTime = movieTime
-  this.tickets = []
-}
-
-Movie.prototype.fullMovie = function() {
-  return this.movieTitle + ", " + this.movieTime;
-}
-
-function Ticket(age) {
-  this.age = age
-}
 
 function resetFields(){
   $("input#new-movie-title").val("");
