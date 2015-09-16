@@ -5,37 +5,32 @@ function Ticket(movieTitle, movieShowTime, patronAge) {
 }
 
 Ticket.prototype.cost = function() {
- var cost = 10;
+  var cost = 10;
 
- if (this.patronAge <== 12 || this.patronAge >== 55) {
-   cost += 2;
- }
+  if (this.patronAge  < 12 || this.patronAge > 55) {
+   cost -= 2;
+  }
   return cost;
 };
 
 
 function resetFields(){
   $("input#new-movie-title").val("");
-  $("input#new-movie-time").val("");
-  $("div.hide-form").not(':first').remove();
+  $("input#new-movie-show-time").val("");
+  $("input#new-patron-age").val("");
 }
 
-
 $(document).ready(function() {
-  $("form#new-movie").submit(function(event) {
+  $("form#new-ticket").submit(function(event) {
     var inputtedMovieTitle = $("input#new-movie-title").val();
-    var inputtedMovieTime = $("input#new-movie-time").val();
+    var inputtedMovieShowTime = $("input#new-movie-show-time").val();
+    var inputtedPatronAge = parseInt($("input#new-patron-age").val());
 
-    var newMovie = new Movie(inputtedMovieTitle, inputtedMovieTime);
+    var newTicket = new Ticket(inputtedMovieTitle, inputtedMovieShowTime, inputtedPatronAge);
+    $(".ticket-show").show();
 
-    $("ul#movies").append("<li><span class='movie'>" + newMovie.fullMovie() + "</span></li>");
-
-    $(".movie").last().click(function() {
-      $("#show-movie h2").text("No Movies for You");
-      $("#show-movie").show();
-
-      });
-
+    $(".new-ticket").append("Movie Title: " + inputtedMovieTitle + "</br> Movie Show Time: " + inputtedMovieShowTime);
+    $(".ticket-cost").text("$" + newTicket.cost() + ".00");
 
     $(resetFields());
     event.preventDefault();

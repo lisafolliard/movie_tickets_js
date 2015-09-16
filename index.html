@@ -14,51 +14,59 @@
         <div class="col-md-6">
           <div class="hide-form">
           <h2>Tonight's Movies:</h2>
-          <p>Midnight Madness</p>
+          <!-- <p>Midnight Madness</p>
           <ul>
             <li>10am</li>
-            <li>2pm</li>
           </ul>
           <p>PeeWee's Big Adventure</p>
-          <ul><li>11am</li>
+          <ul>
           <li>3pm</li>
         </ul>
-          <p>Forrest Gump</p>
-          <ul>
-            <li>10am</li>
-          <li>2pm</li>
-        </ul>
+          <p>Terminator</p>
+          <ul><li>6pm</li>
+        </ul> -->
 
-          <form id="new-movie">
+          <form id="new-ticket">
             <div class="form-group">
               <label for="new-movie-title">Select Movie</label>
               <input type="text" class="form-control" id="new-movie-title">
             </div>
+
             <div class="form-group">
-              <label for="new-movie-time">Your Age</label>
-              <input type="text" class="form-control" id="new-movie-time">
+              <label for="new-movie-show-time">Select Show Time</label>
+              <input type="text" class="form-control" id="new-movie-show-time">
+            </div>
+
+            <div class="form-group">
+              <label for="new-patron-age">Enter Age</label>
+              <input type="text" class="form-control" id="new-patron-age">
             </div>
           </div>
-            </div>
+
 
              <button type="submit" class="btn">Purchase Ticket</button>
           </form>
 
-          <h2>Movies:</h2>
-          <ul id="movies">
+                  <h2>Receipt:</h2>
+                  <div class="ticket-show">
+                    <span class='new-ticket'></span>
+                    <p><span class="ticket-cost"></span></p>
+                    </div>
 
-          </ul>
-        </div>
+                  <!-- <ul id="tickets">
 
-        <div class="col-md-6">
-          <div id="show-movie">
-            <h2></h2>
+                  </ul>
+                  </div>
+                </div>
 
+                  <div class="col-md-6">
+                  <div id="show-movie">
+                    <h2></h2>
 
-          </div>
-        </div>
+                  </div>
+                  </div> -->
 
       </div>
-    </div>
+
   </body>
 </html>
