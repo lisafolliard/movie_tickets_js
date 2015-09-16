@@ -13,7 +13,6 @@ Ticket.prototype.cost = function() {
   return cost;
 };
 
-
 function resetFields(){
   $("input#new-movie-title").val("");
   $("input#new-movie-show-time").val("");
