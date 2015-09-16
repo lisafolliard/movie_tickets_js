@@ -1,3 +1,13 @@
+function Ticket(movie, timeOfDay, age) {
+  this.movie = movie;
+  this.timeOfDay = timeOfDay;
+  this.age = age;
+
+}
+
+
+
+
 function Movie(movieTitle, movieTime) {
   this.movieTitle = movieTitle
   this.movieTime = movieTime
